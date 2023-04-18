@@ -47,7 +47,7 @@ const router = createRouter({
       component: Work,
       meta: {
         requiresAuth: true,
-        roles: ['teacher'],
+        roles: ['teacher', 'admin'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();
@@ -70,7 +70,7 @@ const router = createRouter({
       component: MyChilds,
       meta: {
         requiresAuth: true,
-        roles: ['parent'],
+        roles: ['parent', 'admin'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();
@@ -92,7 +92,7 @@ const router = createRouter({
       component: History,
       meta: {
         requiresAuth: true,
-        roles: ['parent', 'pupil', 'teacher'],
+        roles: ['parent', 'pupil', 'teacher', 'admin'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();

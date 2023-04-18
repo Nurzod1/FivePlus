@@ -21,7 +21,12 @@
 
 <script>
 export default {
-    name: 'sidebar'
+    name: 'sidebar',
+    data () {
+        return {
+            role: "pupil"
+        }
+    }
 }
 </script>
 

@@ -6,7 +6,7 @@
                     <img src="@/assets/img/logo.png" class="logo-img" alt="">
                 </div>
             </router-link>
-            <router-link to="/profile" class="nav-link"><img src="@/assets/img/profileimg.png" alt=""><span>Профиль</span></router-link>
+            <router-link to="/" class="nav-link"><img src="@/assets/img/profileimg.png" alt=""><span>Профиль</span></router-link>
             <router-link to="/mychilds" class="nav-link"><img src="@/assets/img/motherandchild.png" alt=""><span>Мои
                     дети</span></router-link>
             <router-link to="/balance" class="nav-link"><img src="@/assets/img/wallet.png" alt=""><span>Баланс</span></router-link>

@@ -3,63 +3,64 @@
         <header>
             <header-container>
                 <div class="menu-container">
-                    <div class="w3-sidebar w3-bar-block">
-                        <div class="nav">
-                            <router-link to="/">
-                                <img src="../assets/img/logo.png" class="logo-img" alt="">
-                            </router-link>
-                            <a href="#" class="nav-link"><img src="../assets/img/profileimg.png"
-                                    alt=""><span>Профиль</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/motherandchild.png" alt=""><span>Мои
-                                    дети</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/wallet.png" alt=""><span>Баланс</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/time.png" alt=""><span>История
-                                    занятий</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/support.png"
-                                    alt=""><span>Поддержка</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/exit.png" alt=""><span>Выйти</span></a>
-                            <a href="#" class="nav-link teach">Стать учителем</a>
-                        </div>
-                    </div>
+                    <sidebar></sidebar>
+
                     <div class="balance">
                         <div class="balance-container">
                             <div class="balance-title">Калькулятор стоимости</div>
                             <div class="balance-inputs">
-                       
-                                    <input type="text" placeholder="Желаемое количество минут" class="minuts">
-                                    <input type="text" placeholder="Сумма пополнения" class="minuts">
-                                    <div class="flex-for-btn">
-                                        <button class="btn-hist">Пополнить</button>
-                                    </div>
-                         
+
+                                <input type="text" placeholder="Желаемое количество минут" class="minuts">
+                                <input type="text" placeholder="Сумма пополнения" class="minuts">
+                                <div class="flex-for-btn">
+                                    <button class="btn-hist">Пополнить</button>
+                                </div>
+
                             </div>
+
                             <div class="pocket">
-                            <div class="pocket-title">Готовые пакеты</div>
-                            <div class="pockets">
-                                <div class="pocket-block">
-                                    <div class="pocket-block-title">Для начинающих</div>
-                                    <div class="pocket-block-minuts">785 мин.</div>
-                                    <div class="pocket-block-price">5500₽</div>
-                                    <button class="buy-btn" role="button">Купить</button>
+                                <div class="pocket-title">Готовые пакеты</div>
+                                <div class="pockets">
+                                    <swiper :modules="modules" :slides-per-view="3" :space-between="10" navigation
+                                        :pagination="{ clickable: true }" :scrollbar="{ draggable: true }"
+                                        @swiper="onSwiper" @slideChange="onSlideChange">
+                                        <swiper-slide>
+                                            <div class="pocket-block">
+                                                <div class="pocket-block-title">Для начинающих</div>
+                                                <div class="pocket-block-minuts">{{ minuts }}</div>
+                                                <div class="pocket-block-price">{{ price }} руб</div>
+                                                <button class="buy-btn" role="button">Купить</button>
+                                            </div>
+                                        </swiper-slide>
+                                        <swiper-slide>
+                                            <div class="pocket-block">
+                                                <div class="pocket-block-title">Для начинающих</div>
+                                                <div class="pocket-block-minuts">{{ minuts }}</div>
+                                                <div class="pocket-block-price">{{ price }} руб</div>
+                                                <button class="buy-btn" role="button">Купить</button>
+                                            </div>
+                                        </swiper-slide>
+                                        <swiper-slide>
+                                            <div class="pocket-block">
+                                                <div class="pocket-block-title">Для начинающих</div>
+                                                <div class="pocket-block-minuts">{{ minuts }}</div>
+                                                <div class="pocket-block-price">{{ price }} руб</div>
+                                                <button class="buy-btn" role="button">Купить</button>
+                                            </div>
+                                        </swiper-slide>
+                                        <swiper-slide>
+                                            <div class="pocket-block">
+                                                <div class="pocket-block-title">Для начинающих</div>
+                                                <div class="pocket-block-minuts">{{ minuts }}</div>
+                                                <div class="pocket-block-price">{{ price }} руб</div>
+                                                <button class="buy-btn" role="button">Купить</button>
+                                            </div>
+                                        </swiper-slide>
+                                    </swiper>
                                 </div>
-                            
-                                <div class="pocket-block">
-                                    <div class="pocket-block-title">Для начинающих</div>
-                                    <div class="pocket-block-minuts">785 мин.</div>
-                                    <div class="pocket-block-price">5500₽</div>
-                                    <button class="buy-btn" role="button">Купить</button>
-                                </div>
-                                <div class="pocket-block">
-                                    <div class="pocket-block-title">Для начинающих</div>
-                                    <div class="pocket-block-minuts">785 мин.</div>
-                                    <div class="pocket-block-price">5500₽</div>
-                                    <button class="buy-btn" role="button">Купить</button>
-                                </div>
-                            
                             </div>
                         </div>
-                        </div>
-                     
+
                     </div>
 
 
@@ -72,12 +73,42 @@
     </body>
 </template>
 <script>
+
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 export default {
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+    setup() {
+        const onSwiper = (swiper) => {
+            console.log(swiper);
+        };
+        const onSlideChange = () => {
+            console.log('slide change');
+        };
+        return {
+            onSwiper,
+            onSlideChange,
+            modules: [Navigation, Pagination, Scrollbar, A11y],
+        };
+    },
     data() {
         return {
+            minuts: 123,
+            price: 123,
         }
     }
-}
+};
 </script>
 <style scoped>
 body {
@@ -86,7 +117,7 @@ body {
 }
 
 
-.flex-for-btn{
+.flex-for-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,9 +145,7 @@ body {
 }
 
 
-.nav-link span{
-    margin-left: 15px;
-}
+
 .pockets {
     display: flex;
     align-items: center;
@@ -229,6 +258,7 @@ body {
     color: #000;
     width: 100%;
     margin-top: 20px;
+    border-radius: 5px;
     font-size: 16px;
 }
 
@@ -286,68 +316,6 @@ body {
     display: flex;
 }
 
-.nav {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.nav-link {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 36px;
-    color: #fff;
-    margin-top: 20px;
-}
-
-
-.nav-link:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    display: inline-block;
-    height: 1em;
-    width: 2%;
-    border-bottom: 1px solid;
-    margin-top: 10px;
-    opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale(0, 1);
-    transform: scale(0, 1);
-}
-
-.nav-link:hover:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-.nav-link img:after {
-    background-color: #f66d52;
-    display: block;
-    content: "";
-    height: 2px;
-    width: 0%;
-    -webkit-transition: width .3s ease-in-out;
-    -moz--transition: width .3s ease-in-out;
-    transition: width .3s ease-in-out;
-}
-
-.nav-link img:hover:after,
-.nav-link img:focus:after {
-    width: 100%;
-}
-
-.nav-link img {
-    width: 30px;
-    height: 30px;
-}
-
 
 
 .w3-sidebar {
@@ -384,7 +352,7 @@ router-link a {
 
     .w3-sidebar {
         background-color: rgb(24, 23, 28);
-        padding-right: 15px;
+
     }
 
 }
@@ -396,16 +364,18 @@ router-link a {
         display: none;
     }
 
- 
+
     .work-container {
         margin-top: 40px;
 
     }
+
     .balance-inputs[data-v-ac034731] {
-   
-    width: 85%;
-}
-.w3-sidebar{
+
+        width: 85%;
+    }
+
+    .w3-sidebar {
         width: 20%;
     }
 }
@@ -413,7 +383,7 @@ router-link a {
 @media(max-width:600px) {
 
 
-    .pockets{
+    .pockets {
         justify-content: center;
     }
 
@@ -421,7 +391,7 @@ router-link a {
         width: 60px;
         height: 90px;
     }
-   
+
 
 }
 

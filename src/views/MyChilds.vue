@@ -1,22 +1,8 @@
 <template>
     <div class="main-container">
-        <div class="w3-sidebar w3-bar-block">
+        <sidebar></sidebar>
 
-            <div class="nav">
-                <router-link to="/">
-                    <img src="../assets/img/logo.png" class="logo-img" alt="">
-                </router-link>
-                <a href="#" class="nav-link"><img src="../assets/img/profileimg.png" alt=""><span>Профиль</span></a>
-                <a href="#" class="nav-link"><img src="../assets/img/motherandchild.png" alt=""><span>Мои
-                        дети</span></a>
-                <a href="#" class="nav-link"><img src="../assets/img/wallet.png" alt=""><span>Баланс</span></a>
-                <a href="#" class="nav-link"><img src="../assets/img/time.png" alt=""><span>История
-                        занятий</span></a>
-                <a href="#" class="nav-link"><img src="../assets/img/support.png" alt=""><span>Поддержка</span></a>
-                <a href="#" class="nav-link"><img src="../assets/img/exit.png" alt=""><span>Выйти</span></a>
-            </div>
-        </div>
-     
+
         <section class="body">
             <div class="menu-container">
                 <div class="work">
@@ -182,21 +168,22 @@ export default {
 }
 </script>
 <style scoped>
-
-.main-container{
+.main-container {
     min-width: 100%;
     margin: auto;
     padding-top: 50px;
 }
+
 .ready {
     margin-top: 30px;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     margin: auto;
     width: 80%;
 }
-.work-title{
+
+.work-title {
     margin-right: 40px;
 }
 
@@ -275,47 +262,7 @@ export default {
     padding: 0px 10px;
 }
 
-.nav {
-    display: flex;
-    flex-direction: column;
-}
 
-
-.nav-link {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 36px;
-    color: #fff;
-    margin-top: 20px;
-    margin-left: 50px;
-}
-
-
-.nav-link:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    display: inline-block;
-    height: 1em;
-    width: 4%;
-    border-bottom: 1px solid;
-    margin-top: 10px;
-    opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale(0, 1);
-    transform: scale(0, 1);
-}
-
-.nav-link:hover:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
 
 .add-child {
     padding: 7px 30px;
@@ -515,25 +462,28 @@ router-link a {
 
 
 @media(max-width:900px) {
- 
+
     .add-child span {
         display: none;
     }
+
     .ready {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-}
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
     .add-child img {
         margin-right: 0;
 
     }
 
     .menu-container {
-    justify-content: center;
-    margin: auto;
-    margin-left: 100px;
-}
+        justify-content: center;
+        margin: auto;
+        margin-left: 100px;
+    }
+
     .nav-link span {
         display: none;
     }
@@ -654,5 +604,4 @@ router-link a {
     .card-subject-text {
         font-size: 16px;
     }
-}
-</style>
+}</style>

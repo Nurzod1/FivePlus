@@ -3,34 +3,13 @@
         <header>
             <header-container>
                 <div class="menu-container">
-                    <div class="w3-sidebar w3-bar-block">
-
-                        <div class="nav">
-                            <router-link to="/">
-                                <img src="../assets/img/logo.png" class="logo-img" alt="">
-                            </router-link>
-                            <a href="#" class="nav-link"><img src="../assets/img/profileimg.png"
-                                    alt=""><span>Профиль</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/motherandchild.png" alt=""><span>Мои
-                                    дети</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/wallet.png" alt=""><span>Баланс</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/time.png" alt=""><span>История
-                                    занятий</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/support.png"
-                                    alt=""><span>Поддержка</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/exit.png" alt=""><span>Выйти</span></a>
-                        </div>
-                    </div>
-
+                    <sidebar></sidebar>
                     <div class="work">
                         <div class="work-container">
                             <div class="work-title">Работа</div>
-
                             <div class="cards">
-
                                 <div class="work-card">
                                     <div class="card-container">
-
                                         <div class="card-inner">
                                             <div class="card-title">Иван Баранов</div>
                                             <div class="card-quest">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -42,11 +21,11 @@
 
                                                     <div class="card-subject">
                                                 <div class="card-subject-title">Предмет:</div>
-                                                <div class="card-subject-text">Математика</div>
+                                                <div class="card-subject-text">{{ subject }}</div>
                                             </div>
                                             <div class="card-class">
                                                 <div class="card-subject-title">Класс:</div>
-                                                <div class="card-subject-text">9</div>
+                                                <div class="card-subject-text">{{ clasess }}</div>
                                             </div>
                                                 </div>
 
@@ -55,189 +34,6 @@
                                         <div class="work-btns">
                                             <a href="#" class="accept">Принять</a>
                                             <a href="#" class="decline">Отклонить</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="work-card">
-                                    <div class="card-container">
-                                        <div class="card-inner">
-                                            <div class="card-title">Иван Баранов</div>
-                                            <div class="card-quest">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Repellat amet perferendis Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Repellat amet perferendis voluptatibus quam facilis modi! voluptatibus quam
-                                                facilis modi!</div>
-                                            <div class="card-subject">
-                                                <div class="card-subject-title">Предмет:</div>
-                                                <div class="card-subject-text">Математика</div>
-                                            </div>
-                                            <div class="card-class">
-                                                <div class="card-subject-title">Класс:</div>
-                                                <div class="card-subject-text">9</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="work-btns">
-                                            <a href="#" class="accept">Принять</a>
-                                            <a href="#" class="decline">Отклонить</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="work-card">
-                                    <div class="card-container">
-                                        <div class="card-inner">
-                                            <div class="card-title">Иван Баранов</div>
-                                            <div class="card-quest">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Repellat amet perferendis Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Repellat amet perferendis voluptatibus quam facilis modi! voluptatibus quam
-                                                facilis modi!</div>
-                                            <div class="card-subject">
-                                                <div class="card-subject-title">Предмет:</div>
-                                                <div class="card-subject-text">Математика</div>
-                                            </div>
-                                            <div class="card-class">
-                                                <div class="card-subject-title">Класс:</div>
-                                                <div class="card-subject-text">9</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="work-btns">
-                                            <a href="#" class="accept">Принять</a>
-                                            <a href="#" class="decline">Отклонить</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="work-card">
-                                    <div class="card-container">
-                                        <div class="card-inner">
-                                            <div class="card-title">Иван Баранов</div>
-                                            <div class="card-quest">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Repellat amet perferendis Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Repellat amet perferendis voluptatibus quam facilis modi! voluptatibus quam
-                                                facilis modi!</div>
-                                            <div class="card-subject">
-                                                <div class="card-subject-title">Предмет:</div>
-                                                <div class="card-subject-text">Математика</div>
-                                            </div>
-                                            <div class="card-class">
-                                                <div class="card-subject-title">Класс:</div>
-                                                <div class="card-subject-text">9</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="work-btns">
-                                            <a href="#" class="accept">Принять</a>
-                                            <a href="#" class="decline">Отклонить</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="work-card">
-                                    <div class="card-container">
-                                        <div class="card-inner">
-                                            <div class="card-title">Иван Баранов</div>
-                                            <div class="card-quest">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Repellat amet perferendis Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Repellat amet perferendis voluptatibus quam facilis modi! voluptatibus quam
-                                                facilis modi!</div>
-                                            <div class="card-subject">
-                                                <div class="card-subject-title">Предмет:</div>
-                                                <div class="card-subject-text">Математика</div>
-                                            </div>
-                                            <div class="card-class">
-                                                <div class="card-subject-title">Класс:</div>
-                                                <div class="card-subject-text">9</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="work-btns">
-                                            <a href="#" class="accept">Принять</a>
-                                            <a href="#" class="decline">Отклонить</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="work-card">
-                                    <div class="card-container">
-                                        <div class="card-inner">
-                                            <div class="card-title">Иван Баранов</div>
-                                            <div class="card-quest">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Repellat amet perferendis Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Repellat amet perferendis voluptatibus quam facilis modi! voluptatibus quam
-                                                facilis modi!</div>
-                                            <div class="card-subject">
-                                                <div class="card-subject-title">Предмет:</div>
-                                                <div class="card-subject-text">Математика</div>
-                                            </div>
-                                            <div class="card-class">
-                                                <div class="card-subject-title">Класс:</div>
-                                                <div class="card-subject-text">9</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="work-btns">
-                                            <a href="#" class="accept">Принять</a>
-                                            <a href="#" class="decline">Отклонить</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="work-card">
-                                    <div class="card-container">
-                                        <div class="card-inner">
-                                            <div class="card-title">Иван Баранов</div>
-                                            <div class="card-quest">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Repellat amet perferendis Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Repellat amet perferendis voluptatibus quam facilis modi! voluptatibus quam
-                                                facilis modi!</div>
-                                            <div class="card-subject">
-                                                <div class="card-subject-title">Предмет:</div>
-                                                <div class="card-subject-text">Математика</div>
-                                            </div>
-                                            <div class="card-class">
-                                                <div class="card-subject-title">Класс:</div>
-                                                <div class="card-subject-text">9</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="work-btns">
-                                            <a href="#" class="accept">Принять</a>
-                                            <a href="#" class="decline">Отклонить</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="work-card">
-                                    <div class="card-container">
-                                        <div class="card-inner">
-                                            <div class="card-title">Иван Баранов</div>
-                                            <div class="card-quest">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Repellat amet perferendis Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Repellat amet perferendis voluptatibus quam facilis modi! voluptatibus quam
-                                                facilis modi!</div>
-                                            <div class="card-subject">
-                                                <div class="card-subject-title">Предмет:</div>
-                                                <div class="card-subject-text">Математика</div>
-                                            </div>
-                                            <div class="card-class">
-                                                <div class="card-subject-title">Класс:</div>
-                                                <div class="card-subject-text">9</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="work-btns">
-                                            <a href="#" class="accept">Принять</a>
-                                            <a href="#" class="decline">Отклонить</a>
-
                                         </div>
                                     </div>
                                 </div>
@@ -253,10 +49,9 @@
 export default {
     data() {
         return {
-            email: '',
-            password: '',
-            phone: '',
-            userName: 'Вася Пупкин'
+            clasess:9,
+            subject:'Математика',
+            userName: 'Вася Пупкин',
         }
     }
 }
@@ -350,69 +145,6 @@ body {
     justify-content: center;
 }
 
-
-.nav {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.nav-link {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 36px;
-    color: #fff;
-    margin-top: 20px;
-    margin-left: 50px;
-}
-
-.nav-link:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    display: inline-block;
-    height: 1em;
-    width: 2%;
-    border-bottom: 1px solid;
-    margin-top: 10px;
-    opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale(0, 1);
-    transform: scale(0, 1);
-}
-
-.nav-link:hover:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-.nav-link img:after {
-    background-color: #f66d52;
-    display: block;
-    content: "";
-    height: 2px;
-    width: 0%;
-    -webkit-transition: width .3s ease-in-out;
-    -moz--transition: width .3s ease-in-out;
-    transition: width .3s ease-in-out;
-}
-
-.nav-link img:hover:after,
-.nav-link img:focus:after {
-    width: 100%;
-}
-
-.nav-link img {
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
-}
 
 
 .w3-sidebar {

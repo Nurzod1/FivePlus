@@ -3,26 +3,7 @@
         <header>
             <header-container>
                 <div class="menu-container">
-                    <div class="w3-sidebar w3-bar-block">
-                        <div class="nav">
-                            <router-link to="/">
-                             <div class="logo-flex">
-                                <img src="../assets/img/logo.png" class="logo-img" alt="">
-                             </div>  
-                            </router-link>
-                            <a href="#" class="nav-link"><img src="../assets/img/profileimg.png"
-                                    alt=""><span>Профиль</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/motherandchild.png" alt=""><span>Мои
-                                    дети</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/wallet.png" alt=""><span>Баланс</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/time.png" alt=""><span>История
-                                    занятий</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/support.png"
-                                    alt=""><span>Поддержка</span></a>
-                            <a href="#" class="nav-link"><img src="../assets/img/exit.png" alt=""><span>Выйти</span></a>
-                            <a href="#" class="nav-link teach">Стать учителем</a>
-                        </div>
-                    </div>
+                    <sidebar></sidebar>
                     <div class="balance">
                         <div class="balance-container">
                             <div class="pocket">
@@ -68,6 +49,7 @@
 export default {
     data() {
         return {
+          
         }
     }
 }
@@ -109,8 +91,7 @@ body {
     font-size: 30px;
     font-weight: 700;
 }
-.pocket-block-title img{
-}
+
 .problem-inp{
     width:60%;
     padding: 10px;
@@ -324,84 +305,6 @@ body {
 .menu-container {
     display: flex;
 }
-
-.nav {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.nav-link {
-    color: #e2e2e2;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-style: normal;
-    line-height: 36px;
-    margin-top: 20px;
-}
-
-
-.nav-link span{
-    margin-left: 15px;
-}
-
-.nav-link:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    display: inline-block;
-    height: 1em;
-    width: 2%;
-    border-bottom: 1px solid;
-    margin-top: 10px;
-    opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale(0, 1);
-    transform: scale(0, 1);
-}
-
-.nav-link:hover:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-.nav-link img:after {
-    background-color: #f66d52;
-    display: block;
-    content: "";
-    height: 2px;
-    width: 0%;
-    -webkit-transition: width .3s ease-in-out;
-    -moz--transition: width .3s ease-in-out;
-    transition: width .3s ease-in-out;
-}
-
-.nav-link img:hover:after,
-.nav-link img:focus:after {
-    width: 100%;
-}
-
-.nav-link img {
-    width: 30px;
-    height: 30px;
-}
-
-
-
-.w3-sidebar {
-    background-color: rgb(24, 23, 28);
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    width: 15%;
-    padding: 25px;
-    height: 100vh;
-}
-
 
 router-link a {
     text-decoration: none !important;

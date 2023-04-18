@@ -25,7 +25,7 @@ const router = createRouter({
       component: Profile,
       meta: {
         requiresAuth: true,
-        roles: ['parent', 'teacher', 'pupil'],
+        roles: ['parent', 'teacher', 'pupil', 'admin'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();

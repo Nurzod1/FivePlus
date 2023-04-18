@@ -6,15 +6,15 @@
                     <img src="@/assets/img/logo.png" class="logo-img" alt="">
                 </div>
             </router-link>
-            <a href="#" class="nav-link"><img src="@/assets/img/profileimg.png" alt=""><span>Профиль</span></a>
-            <a href="#" class="nav-link"><img src="@/assets/img/motherandchild.png" alt=""><span>Мои
-                    дети</span></a>
-            <a href="#" class="nav-link"><img src="@/assets/img/wallet.png" alt=""><span>Баланс</span></a>
-            <a href="#" class="nav-link"><img src="@/assets/img/time.png" alt=""><span>История
-                    занятий</span></a>
-            <a href="#" class="nav-link"><img src="@/assets/img/support.png" alt=""><span>Поддержка</span></a>
-            <a href="#" class="nav-link"><img src="@/assets/img/exit.png" alt=""><span>Выйти</span></a>
-            <a href="#" class="nav-link teach">Стать учителем</a>
+            <router-link to="/profile" class="nav-link"><img src="@/assets/img/profileimg.png" alt=""><span>Профиль</span></router-link>
+            <router-link to="/mychilds" class="nav-link"><img src="@/assets/img/motherandchild.png" alt=""><span>Мои
+                    дети</span></router-link>
+            <router-link to="/balance" class="nav-link"><img src="@/assets/img/wallet.png" alt=""><span>Баланс</span></router-link>
+            <router-link to="/history" class="nav-link"><img src="@/assets/img/time.png" alt=""><span>История
+                    занятий</span></router-link>
+            <router-link to="/support" class="nav-link"><img src="@/assets/img/support.png" alt=""><span>Поддержка</span></router-link>
+            <router-link to="#" class="nav-link"><img src="@/assets/img/exit.png" alt=""><span>Выйти</span></router-link>
+            <router-link to="#" class="nav-link teach">Стать учителем</router-link>
         </div>
     </div>
 </template>

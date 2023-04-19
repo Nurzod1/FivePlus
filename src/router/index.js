@@ -1,15 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { useAuthStore } from '../stores/auth/AuthStore';
-import Login from "../views/Login.vue";
-import Profile from "../views/Profile.vue";
-import Work from "../views/Work.vue";
-import MyChilds from "../views/MyChilds.vue";
-import History from '../views/History.vue'
-import Support from '../views/Support.vue'
-import Balance from '../views/Balance.vue'
-import Role from '../views/Role.vue'
-import Chat from '../views/Chat.vue'
-import Settings from '../views/Settings.vue'
+import Login from "../components/Login.vue";
+import Profile from "../components/Profile.vue";
+import Work from "../components/Work.vue";
+import MyChilds from "../components/MyChilds.vue";
+import History from '../components/History.vue'
+import Support from '../components/Support.vue'
+import Balance from '../components/Balance.vue'
+import Role from '../components/Role.vue'
+import Chat from '../components/Chat.vue'
+import Settings from '../components/Settings.vue'
+import Teacher from '../components/Teacher.vue'
+import Register from '../components/Register.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,7 +28,7 @@ const router = createRouter({
       component: Profile,
       meta: {
         requiresAuth: true,
-        roles: ['parent', 'teacher', 'pupil', 'admin'],
+        roles: ['parent', 'teacher', 'pupil'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();
@@ -47,7 +50,7 @@ const router = createRouter({
       component: Work,
       meta: {
         requiresAuth: true,
-        roles: ['teacher', 'admin'],
+        roles: ['teacher'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();
@@ -70,7 +73,7 @@ const router = createRouter({
       component: MyChilds,
       meta: {
         requiresAuth: true,
-        roles: ['parent', 'admin'],
+        roles: ['parent'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();
@@ -92,7 +95,7 @@ const router = createRouter({
       component: History,
       meta: {
         requiresAuth: true,
-        roles: ['parent', 'pupil', 'teacher', 'admin'],
+        roles: ['parent', 'pupil', 'teacher'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();
@@ -132,6 +135,16 @@ const router = createRouter({
       path: "/settings",
       name: "Setting",
       component: Settings,
+    },
+    {
+      path: "/teacher",
+      name: "Teacher",
+      component: Teacher,
+    },
+    {
+      path: "/register",
+      name: "Register",
+      component: Register,
     },
   ],
 });

@@ -13,7 +13,7 @@
             <router-link to="/history" class="nav-link"><img src="@/assets/img/time.png" alt=""><span>История
                     занятий</span></router-link>
             <router-link to="/support" class="nav-link"><img src="@/assets/img/support.png" alt=""><span>Поддержка</span></router-link>
-            <router-link to="#" class="nav-link"><img src="@/assets/img/exit.png" alt=""><span>Выйти</span></router-link>
+            <router-link to="" class="nav-link"><img src="@/assets/img/exit.png" alt=""><span>Выйти</span></router-link>
             <router-link to="/login" class="nav-link teach">Стать учителем</router-link>
         </div>
     </div>

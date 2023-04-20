@@ -6,16 +6,31 @@
                     <img src="@/assets/img/logo.png" class="logo-img" alt="">
                 </div>
             </router-link>
-            <router-link to="/" class="nav-link"><img src="@/assets/img/profileimg.png" alt=""><span>Профиль</span></router-link>
+            <router-link to="/" class="nav-link"><img src="@/assets/img/profileimg.png"
+                    alt=""><span>Профиль</span></router-link>
             <router-link to="/mychilds" class="nav-link"><img src="@/assets/img/motherandchild.png" alt=""><span>Мои
                     дети</span></router-link>
-            <router-link to="/balance" class="nav-link"><img src="@/assets/img/wallet.png" alt=""><span>Баланс</span></router-link>
+            <router-link to="/balance" class="nav-link"><img src="@/assets/img/wallet.png"
+                    alt=""><span>Баланс</span></router-link>
             <router-link to="/history" class="nav-link"><img src="@/assets/img/time.png" alt=""><span>История
-                    </span></router-link>
-            <router-link to="/support" class="nav-link"><img src="@/assets/img/support.png" alt=""><span>Поддержка</span></router-link>
+                </span></router-link>
+            <router-link to="/support" class="nav-link"><img src="@/assets/img/support.png"
+                    alt=""><span>Поддержка</span></router-link>
+            <router-link to="/login" class="nav-link"><img src="@/assets/img/support.png"
+                    alt=""><span>Логин</span></router-link>
+            <router-link to="/chat" class="nav-link"><img src="@/assets/img/support.png"
+                    alt=""><span>Чат</span></router-link>
+                    <router-link to="/settings" class="nav-link"><img src="@/assets/img/support.png"
+                    alt=""><span>Настройки</span></router-link>
+                    <router-link to="/register" class="nav-link"><img src="@/assets/img/support.png"
+                    alt=""><span>Регистрация</span></router-link>
+                    <router-link to="/role" class="nav-link"><img src="@/assets/img/support.png"
+                    alt=""><span>Роль</span></router-link>
+                    <router-link to="/work" class="nav-link"><img src="@/assets/img/support.png"
+                    alt=""><span>Работа</span></router-link>
             <router-link to="#" class="nav-link"><img src="@/assets/img/exit.png" alt=""><span>Выйти</span></router-link>
             <router-link to="/teacher" class="nav-link"><img src="@/assets/img/teacher.png" alt=""><span>Стать учителем
-                    </span></router-link>
+                </span></router-link>
         </div>
     </div>
 </template>
@@ -23,7 +38,7 @@
 <script>
 export default {
     name: 'sidebar',
-    data () {
+    data() {
         return {
             role: "pupil"
         }
@@ -32,7 +47,6 @@ export default {
 </script>
 
 <style scoped>
-
 .nav {
     display: flex;
     flex-direction: column;
@@ -119,10 +133,10 @@ router-link a {
 @media (max-width:2560px) {}
 
 @media (max-width:1500px) {
-    .nav-link{
+    .nav-link {
         font-size: 18px;
     }
-   
+
 }
 
 @media (max-width:1200px) {
@@ -152,9 +166,9 @@ router-link a {
     }
 
 
-    
 
-  
+
+
 
 }
 

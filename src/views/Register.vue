@@ -1,17 +1,18 @@
 <template>
- <land-login></land-login>
+ <land-register></land-register>
 </template>
 <script>
-import LandLogin from '@/components/land/LandLogin.vue'
+import LandRegister from '@/components/land/LandRegister.vue'
+import FormInput from '@/components/form/Forminput.vue'
+import SaveBtn from '@/components/Buttons/SaveBtn.vue'
 export default {
     data() {
         return {
-            email: '',
-            password: '',
+    
         }
     },
     components:{
-        LandLogin
+        FormInput,SaveBtn,LandRegister
     }
 }
 </script>
@@ -50,6 +51,7 @@ export default {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
+    margin-top: 20px;
     line-height: 36px;
     color: #fff;
 }
@@ -82,7 +84,14 @@ export default {
 
 }
 
+.login-input[type=text]:focus {
+    width: 100%;
 
+}
+
+.login-input[type=text] {
+    font-weight: 700;
+}
 
 .login-input[type=password]:focus {
     width: 100%;

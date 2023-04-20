@@ -1,15 +1,15 @@
 <template>
-        <LandRole></LandRole>
+   <LandTeacher></LandTeacher>
 </template>
 <script>
-import LandRole from '@/components/land/LandRole.vue'
+import LandTeacher from '@/components/land/LandTeacher.vue'
 export default {
     data() {
         return {
         }
     },
     components:{
-        LandRole
+        LandTeacher
     }
 }
 </script>

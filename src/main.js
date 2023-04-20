@@ -4,7 +4,7 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
-import views from '@/components/UI'
+import views from '@/views/UI'
 
 
 const app = createApp(App)

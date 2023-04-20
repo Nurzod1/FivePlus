@@ -4,7 +4,7 @@
     </body>
 </template>
 <script>
-import LandBalance from '@/components/Land/LandBalance.vue'
+import LandBalance from '@/components/Land/LandBalances.vue'
 export default {
     components: {
         

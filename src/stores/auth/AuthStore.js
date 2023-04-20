@@ -6,7 +6,7 @@ export const useAuthStore = defineStore({
     user: {
       name: 'Rakhim'
     },
-    role: 'admin',
+    role: 'teacher',
   }),
   actions: {
     setUser(user) {

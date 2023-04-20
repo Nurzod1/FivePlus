@@ -89,18 +89,7 @@ body {
   margin-top: 15px;
 }
 
-.w3-sidebar {
-  background-color: rgb(24, 23, 28);
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-  width: 20%;
-}
+
 
 .login-input {
   margin-top: 15px;

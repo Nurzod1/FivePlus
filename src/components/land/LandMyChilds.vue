@@ -180,17 +180,6 @@ export default {
   margin-right: 15px;
 }
 
-.w3-sidebar {
-  background-color: rgb(24, 23, 28);
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  width: 20%;
-}
 
 .work {
   width: 95%;

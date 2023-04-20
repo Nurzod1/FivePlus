@@ -8,8 +8,8 @@
       </router-link>
       <div class="login-title">Авторизация</div>
       <div class="inputs">
-        <form-input></form-input>
-        <form-input></form-input>
+        <form-input placeholder="ВВЕДИТЕ EMAIL" type="email"></form-input>
+        <form-input placeholder="ВВЕДИТЕ ПАРОЛЬ" type="password"></form-input>
       </div>
       <SaveBtn>Продолжить</SaveBtn>
       <router-link to="/register">

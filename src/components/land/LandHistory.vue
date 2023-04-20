@@ -279,16 +279,7 @@ export default {
   display: flex;
 }
 
-.w3-sidebar {
-  background-color: rgb(24, 23, 28);
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  width: 15%;
-  padding: 25px;
-  height: 100vh;
-}
+
 
 router-link a {
   text-decoration: none !important;

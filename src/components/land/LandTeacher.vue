@@ -104,11 +104,6 @@ export default {
 }
 </script>
 <style scoped>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: sans-serif;
@@ -119,9 +114,10 @@ body {
 }
 
 .container {
-    max-width: 1107px;
     margin: 0 auto;
-    width: 97%;
+    width: 87%;
+    padding: 50px;
+    height: 100vh;
 }
 
 h1 {

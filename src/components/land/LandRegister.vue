@@ -8,16 +8,12 @@
       </router-link>
       <div class="login-title">Cоздайте аккаунт</div>
       <div class="inputs">
-        <form-input></form-input>
-        <form-input></form-input>
-
-        <form-input></form-input>
-        <form-input></form-input>
+        <form-input :placeholder="Name" type="text"></form-input>
+        <form-input :placeholder="surName" type="text"></form-input>
+        <form-input :placeholder="email" type="email"></form-input>
+        <form-input :placeholder="password" type="password"></form-input>
       </div>
-      <button class="enter">Создать</button>
-      <router-link to="/register">
-        <save-btn></save-btn>
-      </router-link>
+        <save-btn>Создать</save-btn>
     </div>
   </div>
 </template>
@@ -26,7 +22,12 @@ import FormInput from "@/components/form/Forminput.vue";
 import SaveBtn from "@/components/Buttons/SaveBtn.vue";
 export default {
   data() {
-    return {};
+    return {
+      surName:'ВВЕДИТЕ ФАМИЛИЮ',
+      Name:'ВВЕДИТЕ ИМЯ',
+      password:'ВВЕДИТЕ ПАРОЛЬ',
+      email:'ВВЕДИТЕ EMAIL'
+    };
   },
   components: {
     FormInput,

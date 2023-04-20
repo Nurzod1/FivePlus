@@ -28,7 +28,7 @@ const router = createRouter({
       component: Profile,
       meta: {
         requiresAuth: true,
-        roles: ['parent', 'teacher', 'pupil', 'admin'],
+        roles: ['parent', 'teacher', 'pupil'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();
@@ -50,7 +50,7 @@ const router = createRouter({
       component: Work,
       meta: {
         requiresAuth: true,
-        roles: ['teacher', 'admin'],
+        roles: ['teacher'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();
@@ -73,7 +73,7 @@ const router = createRouter({
       component: MyChilds,
       meta: {
         requiresAuth: true,
-        roles: ['parent', 'admin'],
+        roles: ['parent'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();
@@ -95,7 +95,7 @@ const router = createRouter({
       component: History,
       meta: {
         requiresAuth: true,
-        roles: ['parent', 'pupil', 'teacher', 'admin'],
+        roles: ['parent', 'pupil', 'teacher'],
       },
       beforeEnter: (to, from, next) => {
         const authStore = useAuthStore();

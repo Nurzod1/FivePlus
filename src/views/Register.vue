@@ -1,33 +1,18 @@
 <template>
-    <div class="login">
-        <div class="login-container">
-            <router-link to="/">
-                <div class="logo"><img src="../assets/img/logo.png" class="logo-img" alt=""></div>
-            </router-link>
-            <div class="login-title">Cоздайте аккаунт</div>
-            <div class="inputs">
-                <input type="text" v-model="name" placeholder="Введите Имя"  class="login-input">
-                <input type="text" v-model="surName" placeholder="Введите Фамилию" class="login-input">
-                <input type="email" v-model="email" placeholder="Введите Email" class="login-input">
-            
-                <input type="password" v-model.trim="password" placeholder="Введите Пароль" class="login-input">
-            </div>
-            <button class="enter">Создать</button>
-            <router-link to="/register">
-                <div href="#" class="have-account">Уже есть аккаунт?</div>
-            </router-link>
-        </div>
-    </div>
+ <land-register></land-register>
 </template>
 <script>
+import LandRegister from '@/components/land/LandRegister.vue'
+import FormInput from '@/components/form/Forminput.vue'
+import SaveBtn from '@/components/Buttons/SaveBtn.vue'
 export default {
     data() {
         return {
-            email: '',
-            password: '',
-            name:'',
-            surName:'',
+    
         }
+    },
+    components:{
+        FormInput,SaveBtn,LandRegister
     }
 }
 </script>

@@ -1,17 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { useAuthStore } from '../stores/auth/AuthStore';
-import Login from "../components/Login.vue";
-import Profile from "../components/Profile.vue";
-import Work from "../components/Work.vue";
-import MyChilds from "../components/MyChilds.vue";
-import History from '../components/History.vue'
-import Support from '../components/Support.vue'
-import Balance from '../components/Balance.vue'
-import Role from '../components/Role.vue'
-import Chat from '../components/Chat.vue'
-import Settings from '../components/Settings.vue'
-import Teacher from '../components/Teacher.vue'
-import Register from '../components/Register.vue'
+import Login from "../views/Login.vue";
+import Profile from "../views/Profile.vue";
+import Work from "../views/Work.vue";
+import MyChilds from "../views/MyChilds.vue";
+import History from '../views/History.vue'
+import Support from '../views/Support.vue'
+import Balance from '../views/Balance.vue'
+import Role from '../views/Role.vue'
+import Chat from '../views/Chat.vue'
+import Settings from '../views/Settings.vue'
+import Teacher from '../views/Teacher.vue'
+import Register from '../views/Register.vue'
 
 
 const router = createRouter({

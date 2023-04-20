@@ -1,28 +1,17 @@
 <template>
-    <div class="login">
-        <div class="login-container">
-            <router-link to="/">
-                <div class="logo"><img src="../assets/img/logo.png" class="logo-img" alt=""></div>
-            </router-link>
-            <div class="login-title">Авторизация</div>
-            <div class="inputs">
-                <input type="email" v-model.trim="email" placeholder="Введите логин" class="login-input">
-                <input type="password" v-model.trim="password" placeholder="Введите пароль" class="login-input">
-            </div>
-            <button class="enter">Продолжить</button>
-            <router-link to="/register">
-                <div href="#" class="have-account">Еще нету аккаунта?</div>
-            </router-link>
-        </div>
-    </div>
+ <land-login></land-login>
 </template>
 <script>
+import LandLogin from '@/components/land/LandLogin.vue'
 export default {
     data() {
         return {
             email: '',
             password: '',
         }
+    },
+    components:{
+        LandLogin
     }
 }
 </script>

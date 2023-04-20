@@ -4,34 +4,33 @@
             <header-container>
                 <div class="menu-container">
                     <sidebar></sidebar>
-
                     <div class="support">
-                 <div class="support-container">
-                    <div class="support-flex">
-                        <div class="support-input"> <input type="text" class="problem-inp" placeholder="Проблема"></div>
-                        <div class="support-input"><textarea type="submit" class="problem-inp-detail" placeholder="Подробное описание проблемы"></textarea></div>
-                      <div class="btn-center">
-                        <button class="btn-hist" role="button">Отправить</button>
-                      </div>
-
+                        <div class="support-container">
+                            <div class="support-flex">
+                                <div class="support-input"> <input type="text" class="problem-inp" placeholder="Проблема">
+                                </div>
+                                <div class="support-input"><textarea type="submit" class="problem-inp-detail"
+                                        placeholder="Подробное описание проблемы"></textarea></div>
+                                <div class="btn-center">
+                                    <GradientBtn>Отправить</GradientBtn>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                 </div>
-
-                    </div>
-
                 </div>
-
             </header-container>
-
         </header>
-
     </body>
 </template>
 <script>
+import GradientBtn from '@/components/Buttons/GradientBtn.vue'
 export default {
     data() {
         return {
         }
+    },
+    components: {
+        GradientBtn
     }
 }
 </script>
@@ -42,32 +41,33 @@ body {
 }
 
 
-.support{
+.support {
     width: 30%;
     margin: auto;
     margin-top: 10%;
 }
 
-.support-flex{
+.support-flex {
     display: flex;
     flex-direction: column;
 }
 
-.support-input{
+.support-input {
     color: #fff;
     text-align: center;
 }
-.teach{
+
+.teach {
     padding-top: 70%;
 }
 
-.btn-center{
+.btn-center {
     display: flex;
     justify-content: center;
 }
 
-.problem-inp{
-    width:60%;
+.problem-inp {
+    width: 60%;
     padding: 10px;
     border: none;
     text-align: center;
@@ -75,8 +75,8 @@ body {
     font-size: 16px;
 }
 
-.problem-inp-detail{
-    width:80%;
+.problem-inp-detail {
+    width: 80%;
     padding: 10px;
     border: none;
     text-align: center;
@@ -176,7 +176,7 @@ router-link a {
         display: none;
     }
 
-   
+
 
     .work-container {
         margin-top: 40px;

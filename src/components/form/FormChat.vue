@@ -1,10 +1,8 @@
 <template>
-    <body>
         <header>
             <header-container>
                 <div class="menu-container">
                     <sidebar></sidebar>
-
                     <div class="balance">
                         <div id="container">
                             <aside>
@@ -235,7 +233,6 @@
 
         </header>
 
-    </body>
 </template>
 <script>
 export default {
